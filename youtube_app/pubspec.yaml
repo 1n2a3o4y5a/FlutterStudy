@@ -1,4 +1,4 @@
-name: my_app2
+name: youtube_app
 description: A new Flutter project.
 
 version: 1.0.0+1
@@ -17,6 +17,8 @@ dev_dependencies:
     sdk: flutter
 
 
-flutter:
-  uses-material-design: true
 
+flutter:
+
+
+  uses-material-design: true

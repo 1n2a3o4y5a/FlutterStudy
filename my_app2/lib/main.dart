@@ -70,6 +70,26 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               child: Text('新規登録'),
               onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      // Retrieve the text the user has entered by using the
+                      // TextEditingController.
+                      content: Text(myController.text),
+                    );
+                  },
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text('次へ'),
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NextPage(),
+                    )
+                );
               },
             ),
           ],

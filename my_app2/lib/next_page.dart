@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NextPage extends StatelessWidget {
-  NextPage(this.name);
-  final String name;
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +14,28 @@ class NextPage extends StatelessWidget {
         height: double.infinity,
         color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(name),
-            Center(
-              child: RaisedButton(
-                child: Text('戻る'),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
+            Text('Item 1'),
+            Text('Item 2'),
+            Text('Item 3'),
+            Container(
+              child: Container(
+                child: Row(
+                  children: [
+                    Text('Item 1'),
+                    Text('Item 2'),
+                    Text('Item 3'),
+                    Container(
+                      child: Column(
+                        children: [
+                          Text('Item 1'),
+                          Text('Item 2'),
+                          Text('Item 3'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
