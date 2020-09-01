@@ -10,6 +10,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final String kboyText = 'ヤッホヤッホ';
+  String text = 'aaaaaaaa';
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SecondRoute()),
+                          MaterialPageRoute(builder: (context) => SecondRoute(text)),
                         );
                       },
                     ),

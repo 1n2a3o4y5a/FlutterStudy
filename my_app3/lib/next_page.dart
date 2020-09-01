@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 class SecondRoute extends StatelessWidget {
+  SecondRoute(this.text);
+  String text;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,9 @@ class SecondRoute extends StatelessWidget {
       appBar: AppBar(
         title: Text("次のページ"),
       ),
-      body: Center(),
+      body: Center(
+        child: Text(text),
+      ),
     );
   }
 }
