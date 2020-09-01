@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_app3/main_model.dart';
 import 'package:provider/provider.dart';
 
+import 'next_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -30,9 +32,18 @@ class MyApp extends StatelessWidget {
                   children: [
                     Center(child: Text(model.kboyText)),
                     RaisedButton(
-                      child: Text('次へ'),
+                      child: Text('変化'),
                       onPressed: () {
                         model.changeKboyText();
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text('遷移'),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SecondRoute()),
+                        );
                       },
                     ),
                   ],
