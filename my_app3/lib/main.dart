@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   final String kboyText = 'ヤッホヤッホ';
   String text = 'aaaaaaaa';
 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
